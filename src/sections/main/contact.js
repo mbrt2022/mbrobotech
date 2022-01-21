@@ -3,24 +3,27 @@
 import { jsx } from 'theme-ui';
 import { Container, Heading, Text, Box } from 'theme-ui';
 import Form from 'components/Form';
+import Slide from 'react-reveal/Slide';
 
 const Contact = () => {
   return (
     <section sx={styles.contact} id="contact">
       <Container sx={styles.contact.container}>
-        <Box sx={styles.contact.contentBox}>
-          <Heading as="h2" variant="heroPrimary" sx={styles.contact.title1}>
-            Co nas wyróżnia?
-          </Heading>
-          <Text as="p">Klienci wolą nas od innych firm z kilku jasnych powodów:</Text>
-          <ul sx={styles.contact.list}>
-            <li>doradztwo na każdym etapie,</li>
-            <li>bardzo doświadczeni instalatorzy,</li>
-            <li>oferujemy tylko sprawdzony sprzęt,</li>
-            <li>dbamy o każdy drobiazg,</li>
-            <li>ubezpieczenie od odpowiedzialności.</li>
-          </ul>
-        </Box>
+        <Slide bottom>
+          <Box sx={styles.contact.contentBox}>
+            <Heading as="h2" variant="heroPrimary" sx={styles.contact.title1}>
+              Co nas wyróżnia?
+            </Heading>
+            <Text as="p">Klienci wolą nas od innych firm z kilku jasnych powodów:</Text>
+            <ul sx={styles.contact.list}>
+              <li>doradztwo na każdym etapie,</li>
+              <li>bardzo doświadczeni instalatorzy,</li>
+              <li>oferujemy tylko sprawdzony sprzęt,</li>
+              <li>dbamy o każdy drobiazg,</li>
+              <li>ubezpieczenie od odpowiedzialności.</li>
+            </ul>
+          </Box>
+        </Slide>
         <Box sx={styles.contact.formContainer}>
           <Heading as="h2" variant="heroPrimary" sx={styles.contact.title1}>
             Napisz do nas

@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image } from 'theme-ui';
-// import Image from 'next/image';
+import Fade from 'react-reveal/Fade';
 import WorkerImg from 'assets/worker.png';
 
 const AboutUs = () => {
@@ -27,10 +27,12 @@ const AboutUs = () => {
           </Text>
         </Box>
 
-        <Box sx={styles.aboutus.imageBox}>
-          <Image sx={styles.aboutus.imageBox.image} src={WorkerImg} alt="MB Robo-Tech worker" />
-          <div sx={styles.aboutus.imageBox.blackRec} />
-        </Box>
+        <Fade right>
+          <Box sx={styles.aboutus.imageBox}>
+            <Image sx={styles.aboutus.imageBox.image} src={WorkerImg} alt="MB Robo-Tech worker" />
+            <div sx={styles.aboutus.imageBox.blackRec} />
+          </Box>
+        </Fade>
       </Container>
     </section>
   );

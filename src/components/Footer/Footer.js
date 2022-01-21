@@ -7,6 +7,7 @@ import FooterImgDesktop from 'assets/footer-img-desktop.png';
 import FooterImgTablet from 'assets/footer-img-tablet.png';
 import FooterImgMobile from 'assets/footer-img-mobile.png';
 import useMediaQuery from 'hooks/useMediaQuery';
+import { Link } from 'components/Link';
 
 const Footer = () => {
   const isDesktop = useMediaQuery('(min-width: 1100px)');
@@ -23,7 +24,12 @@ const Footer = () => {
       </Box>
       <Container sx={styles.footer.container}>
         <Box sx={styles.footer.contentBox}>
-          <Text as="p">{`© ${currentYear} mb-robo-tech.pl. All rights reserved | Design by val089`}</Text>
+          <Text as="p">
+            {`© ${currentYear} mbrobotech.pl. All rights reserved | Design by `}{' '}
+            <Link path="http://kamilszerlag.com/" variant="customLink">
+              kamilszerlag.com
+            </Link>
+          </Text>
           <Box sx={styles.footer.iconsBox}>
             <Facebook fill="#fff" />
             <Instagram fill="#fff" />

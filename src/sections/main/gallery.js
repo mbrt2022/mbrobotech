@@ -3,6 +3,7 @@
 import { jsx } from 'theme-ui';
 import { Container, Heading, Text, Box, Button, Grid } from 'theme-ui';
 import { Link } from 'components/Link';
+import Fade from 'react-reveal/Fade';
 import GalleryImg01 from 'assets/gallery01.png';
 import GalleryImg02 from 'assets/gallery02.png';
 import GalleryImg03 from 'assets/gallery03.png';
@@ -12,24 +13,28 @@ const Gallery = () => {
   return (
     <section sx={styles.gallery} id="gallery">
       <Container sx={styles.gallery.container}>
-        <Box sx={styles.gallery.boxContent}>
-          <Heading as="h2" variant="heroPrimary">
-            Galeria
-          </Heading>
-          <Text as="p" variant="heroSecondary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum viverra tellus
-            sapien.
-          </Text>
-          <Link path="/gallery">
-            <Button variant="green">Przejdź do galerii</Button>
-          </Link>
-        </Box>
-        <Grid sx={styles.gallery.gridContainer}>
-          <Box sx={styles.gallery.img01} />
-          <Box sx={styles.gallery.img02} />
-          <Box sx={styles.gallery.img03} />
-          <Box sx={styles.gallery.img04} />
-        </Grid>
+        <Fade left>
+          <Box sx={styles.gallery.boxContent}>
+            <Heading as="h2" variant="heroPrimary">
+              Galeria
+            </Heading>
+            <Text as="p" variant="heroSecondary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum viverra tellus
+              sapien.
+            </Text>
+            <Link path="/gallery">
+              <Button variant="green">Przejdź do galerii</Button>
+            </Link>
+          </Box>
+        </Fade>
+        <Fade right>
+          <Grid sx={styles.gallery.gridContainer}>
+            <Box sx={styles.gallery.img01} />
+            <Box sx={styles.gallery.img02} />
+            <Box sx={styles.gallery.img03} />
+            <Box sx={styles.gallery.img04} />
+          </Grid>
+        </Fade>
       </Container>
     </section>
   );

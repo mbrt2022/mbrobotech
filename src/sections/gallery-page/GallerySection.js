@@ -57,13 +57,16 @@ export default GallerySection;
 
 const styles = {
   gallerySection: {
-    pt: 120,
+    pt: 50,
     backLink: {
       fontFamily: 'body',
       textDecoration: 'none',
       display: 'flex',
       alignItems: 'center',
       color: 'secondary',
+      '&:hover': {
+        color: 'link',
+      },
       p: {
         pl: 10,
       },

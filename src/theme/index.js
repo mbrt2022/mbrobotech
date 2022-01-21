@@ -10,6 +10,7 @@ export default {
     offerSection: '#DEDEDE',
     input: '#193B47',
     error: 'red',
+    grey: '#adaeae',
   },
   breakpoints: ['480px', '640px', '768px', '1024px', '1220px', '1366px', '1620px'],
   fonts: {
@@ -91,6 +92,9 @@ export default {
     logo: {
       display: 'flex',
     },
+    customLink: {
+      color: 'text',
+    },
   },
   buttons: {
     defaultBtn: {
@@ -105,6 +109,10 @@ export default {
       fontWeight: 500,
       '&:focus': {
         outline: 0,
+      },
+      '&:disabled': {
+        backgroundColor: 'grey',
+        color: 'secondary',
       },
     },
     primary: {

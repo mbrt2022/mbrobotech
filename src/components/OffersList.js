@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Text, Card, Box, Heading, Image } from 'theme-ui';
+import Flip from 'react-reveal/Flip';
 import OfferImg01 from 'assets/offer01.png';
 import OfferImg02 from 'assets/offer02.png';
 
@@ -33,17 +34,19 @@ const OffersList = () => {
   return (
     <section sx={styles.wrapper}>
       {offers.map(({ id, imgSrc, title, description }) => (
-        <Card sx={styles.offerCard} key={id}>
-          <Image src={imgSrc} />
-          <Box sx={styles.offerCard.contentBox}>
-            <Heading as="h3" variant="cardPrimary">
-              {title}
-            </Heading>
-            <Text as="p" variant="basic" sx={styles.offerCard.contentBox.description}>
-              {description}
-            </Text>
-          </Box>
-        </Card>
+        <Flip left key={id}>
+          <Card sx={styles.offerCard}>
+            <Image src={imgSrc} />
+            <Box sx={styles.offerCard.contentBox}>
+              <Heading as="h3" variant="cardPrimary">
+                {title}
+              </Heading>
+              <Text as="p" variant="basic" sx={styles.offerCard.contentBox.description}>
+                {description}
+              </Text>
+            </Box>
+          </Card>
+        </Flip>
       ))}
     </section>
   );
