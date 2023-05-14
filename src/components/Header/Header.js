@@ -8,9 +8,11 @@ import { string } from 'prop-types';
 import Logo from 'components/Logo';
 import menuItems from './header.data';
 import logo from 'assets/logo.png';
+import useMediaQuery from 'hooks/useMediaQuery';
 
 const Header = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 1024px)');
 
   const menuToggle = () => {
     setIsOpen(!isOpen);
@@ -30,7 +32,7 @@ const Header = ({ className }) => {
 
   const navStyles = {
     left: isOpen ? '0%' : '-100%',
-    backgroundColor: isOpen ? '#000' : 'transparent',
+    backgroundColor: isOpen && isMobile ? '#000' : 'transparent',
   };
 
   return (

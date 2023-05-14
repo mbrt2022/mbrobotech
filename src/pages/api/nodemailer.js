@@ -46,12 +46,12 @@ const handler = async (req, res) => {
       from: 'mbrobotech22@gmail.com',
       replyTo: email,
       subject: `Wiadomość ze strony mbrobotech.pl`,
-      name: name,
-      phone: phone,
+      name,
+      phone,
       text: message,
       html: `
-      <p><strong>Wiadomość od:</strong> ${message.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p>
-      <p><strong>Telefon:</strong> ${message.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p>
+      <p><strong>Wiadomość od:</strong> ${name}</p>
+      <p><strong>Telefon:</strong> ${phone}</p>
       <p><strong>Wiadomość:</strong> ${message.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p>
       `,
     });
