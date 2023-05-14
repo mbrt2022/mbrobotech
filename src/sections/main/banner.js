@@ -5,10 +5,12 @@ import { Container, Box, Heading, Text, Button } from 'theme-ui';
 import { Link as ScrollLink } from 'react-scroll';
 import BannerImg from 'assets/main_banner.jpg';
 import { Facebook, Instagram } from 'components/customIcon';
+import Image from 'next/image';
 
 export default function Banner() {
   return (
     <section sx={styles.banner} id="home">
+      <Image src={BannerImg} alt="me" priority layout="fill" objectFit="cover" />
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
@@ -39,7 +41,7 @@ const styles = {
     width: '100%',
     minHeight: '100vh',
     zIndex: 2,
-    backgroundImage: `url(${BannerImg})`,
+    // backgroundImage: `url(${BannerImg})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
@@ -52,6 +54,7 @@ const styles = {
       justifyContent: 'center',
     },
     contentBox: {
+      zIndex: 3,
       width: ['100%', '90%', '535px', null, '57%', '60%', '55%', '60%'],
     },
     iconsBox: {
